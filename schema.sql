@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS fotos;
 
-CREATE TABLE posts (
+CREATE TABLE fotos (
     foto_id INTEGER PRIMARY KEY AUTOINCREMENT,
     file_name TEXT,
     elo_general INTEGER DEFAULT 1400,
