@@ -14,6 +14,10 @@ main {
   height: 85%;
 }
 
+.login-form {
+  width: 35%;
+}
+
 @media only screen and (max-width: 992px) {
   .mh-lg-45 {
     max-height: 45%;
@@ -21,5 +25,15 @@ main {
 
   .mh-lg-10 {
     max-height: 10%;
+  }
+
+  .login-form {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .login-form {
+    width: 90%;
   }
 }

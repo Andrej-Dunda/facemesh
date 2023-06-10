@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS fotos;
+
+CREATE TABLE posts (
+    foto_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    file_name TEXT,
+    elo_general INTEGER DEFAULT 1400,
+    elo_male INTEGER DEFAULT 1400,
+    elo_female INTEGER DEFAULT 1400
+);
