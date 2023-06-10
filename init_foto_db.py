@@ -2,7 +2,7 @@ import sqlite3
 import os
 
 # Connect to the database
-connection = sqlite3.connect('database.db')
+connection = sqlite3.connect('foto_database.db')
 
 # Execute the schema script
 with open('schema.sql') as f:

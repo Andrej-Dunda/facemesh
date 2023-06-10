@@ -19,19 +19,19 @@
       <div class="d-flex justify-content-center">
         <h4 class="text-center m-2">Věk: <span id="age">{{ age }}</span> let</h4>
         <h4 class="text-center m-2">Pohlaví: <span id="gender">{{ gender }}</span></h4>
-        <a href="{{ url_for('login', age=age, gender=gender) }}" class="btn btn-primary m-2">Změnit</a>
+        <a href="{{ url_for('login_form', age=age, gender=gender) }}" class="btn btn-primary m-2">Změnit</a>
       </div>
     </header>
     <main class="container-fluid">
       <div class="row h-100 d-flex justify-content-center align-content-around">
-        <a href="#" class="col-10 col-lg-4 mh-lg-45 d-flex justify-content-center align-items-center">
-          <img class="mw-100 mh-100" src="{{ url_for('static', filename= 'images/man_01.jpg') }}" alt="person1">
+        <a href="{{ url_for('edit', winning_foto_id=foto1['foto_id'], losing_foto_id=foto2['foto_id']) }}" class="col-10 col-lg-4 mh-lg-45 d-flex justify-content-center align-items-center">
+          <img class="mw-100 mh-100" src="{{ url_for('static', filename= 'images/' + foto1['file_name']) }}" alt="person1">
         </a>
         <div class="col-12 col-lg-2 mh-10 d-flex justify-content-center align-items-center">
           <h2 class="text-center w-100 my-1">NEBO</h2>
         </div>
-        <a href="#" class="col-10 col-lg-4 mh-lg-45 d-flex justify-content-center align-items-center">
-          <img class="mw-100 mh-100" src="{{ url_for('static', filename= 'images/woman_01.jpg') }}" alt="person2">
+        <a href="{{ url_for('edit', winning_foto_id=foto2['foto_id'], losing_foto_id=foto1['foto_id']) }}" class="col-10 col-lg-4 mh-lg-45 d-flex justify-content-center align-items-center">
+          <img class="mw-100 mh-100" src="{{ url_for('static', filename= 'images/' + foto2['file_name']) }}" alt="person2">
         </a>
       </div>
     </main>
