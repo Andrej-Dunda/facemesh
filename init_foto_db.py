@@ -19,6 +19,9 @@ for filename in os.listdir(directory):
     if filename.endswith('.jpg'):
         # Insert the file name into the database
         cur.execute("INSERT INTO fotos (file_name) VALUES (?)", (filename,))
+        with open("files.txt", "a") as file:
+            file.write("'" + filename + "', ")
+
 
 # Commit the changes and close the connection
 connection.commit()
