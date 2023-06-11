@@ -149,7 +149,6 @@ def login():
           conn = get_user_db_connection()
           cur = conn.cursor()
           cur.execute("INSERT INTO users (user_age, user_gender, user_timestamp) VALUES (?, ?, ?)", (age, gender, datetime.now().strftime("%Y-%m-%d %H:%M:%S"),))
-          print(f"\n\n\nNew user inserted\nAge: {age}\nGender: {gender}\n\n\n")
 
           conn.commit()
           conn.close()
@@ -162,6 +161,10 @@ def login():
 def login_form():
     age = session.get('age')
     gender = session.get('gender')
+    if not age:
+        age = 18
+    if not gender:
+        gender = "Muž"
     return render_template('login.html', age=age, gender=gender)
 
 # Main page - this is where the user selects between fotos from random pairs of pictures, the results are saved in the database
