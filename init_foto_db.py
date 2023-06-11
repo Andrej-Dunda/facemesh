@@ -5,7 +5,7 @@ import os
 connection = sqlite3.connect('foto_database.db')
 
 # Execute the schema script
-with open('schema.sql') as f:
+with open('foto_db_schema.sql') as f:
     connection.executescript(f.read())
 
 # Create a cursor
